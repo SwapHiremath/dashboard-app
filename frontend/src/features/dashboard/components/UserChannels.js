@@ -39,17 +39,19 @@ function UserChannels() {
             </tr>
           </thead>
           <tbody>
-            {cityData.map((u, k) => {
-              return (
-                <tr key={k}>
-                  <th>{k + 1}</th>
-                  <td>{u.Name}</td>
-                  <td>{u.CountryCode}</td>
-                  <td>{u.District}</td>
-                  <td>{u.Population}</td>
-                </tr>
-              );
-            })}
+            {cityData
+              ? cityData.map((u, k) => {
+                  return (
+                    <tr key={k}>
+                      <th>{k + 1}</th>
+                      <td>{u.Name}</td>
+                      <td>{u.CountryCode}</td>
+                      <td>{u.District}</td>
+                      <td>{u.Population}</td>
+                    </tr>
+                  );
+                })
+              : null}
           </tbody>
         </table>
       </div>
