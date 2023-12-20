@@ -31,7 +31,7 @@ function LineChart() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/city")
+      .get("http://3.108.65.198:3001/city")
       .then((response) => {
         setCityData(response.data);
       })
