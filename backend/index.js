@@ -1,24 +1,24 @@
 const express = require("express");
 const mysql = require("mysql2");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 
 const port = 3001;
 
 var corsOptions = {
-  origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200 // For legacy browser support
-}
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200, // For legacy browser support
+};
 
 app.use(cors(corsOptions));
 
-
 // MySQL database connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Miraj@2006",
-  database: "world",
+  host: "sql12.freesqldatabase.com",
+  user: "sql12671894",
+  password: "28FFXfBzDX",
+  database: "sql12671894",
+  port: "3306",
 });
 
 // Connect to MySQL
