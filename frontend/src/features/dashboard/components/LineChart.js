@@ -26,8 +26,8 @@ ChartJS.register(
 );
 
 function LineChart() {
-  const [cityData, setCityData] = useState([]);
-  const [lineChartData, setLineChartData] = useState([]);
+  const [cityData, setCityData] = useState(null);
+  const [lineChartData, setLineChartData] = useState(null);
 
   useEffect(() => {
     axios
@@ -42,7 +42,7 @@ function LineChart() {
 
   useEffect(() => {
     debugger;
-    if (cityData.length > 0) {
+    if (cityData) {
       const labels = cityData.map((item) => item.Name);
       const data = {
         labels,
