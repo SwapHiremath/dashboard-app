@@ -15,7 +15,7 @@ function UserChannels() {
 
   useEffect(() => {
     axios
-      .get("http://3.108.65.198:3001/city")
+      .get("http://13.235.75.191:3001/city")
       .then((response) => {
         setCityData(response.data);
       })
